@@ -1,7 +1,7 @@
 %define module	Youri-Package-RPM-Updater
 %define name	perl-%{module}
 %define version 0.1.0
-%define release %mkrel 1
+%define release %mkrel 2
 
 Name:		%{name}
 Version:	%{version}
@@ -13,13 +13,14 @@ Source:		http://youri.zarb.or/download/%{module}-v%{version}.tar.bz2
 Url:		http://youri.zarb.org
 Obsoletes:  youri
 %if %{mdkversion} < 1010
-Buildrequires:	perl-devel
+BuildRequires:	perl-devel
 %endif
-Buildrequires:	perl-version
-Buildrequires:	perl(File::Fetch)
-Buildrequires:	perl(DateTime)
-Buildrequires:	perl(RPM4)
-Buildarch:	    noarch
+BuildRequires:	perl(File::Fetch)
+BuildRequires:	perl(DateTime)
+BuildRequires:	perl(RPM4)
+BuildRequires:	perl-version
+Requires:	    perl-version
+BuildArch:	    noarch
 BuildRoot:	    %{_tmppath}/%{name}-%{version}
 
 %description
