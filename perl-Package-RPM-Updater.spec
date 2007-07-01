@@ -19,6 +19,7 @@ BuildRequires:	perl(File::Fetch)
 BuildRequires:	perl(DateTime)
 BuildRequires:	perl(RPM4)
 BuildRequires:	perl(Test::Exception)
+BuildRequires:	perl(SVN::Client)
 BuildRequires:	perl-version
 Requires:	    perl-version
 BuildArch:	    noarch
