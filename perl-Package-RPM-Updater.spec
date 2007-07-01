@@ -1,6 +1,6 @@
 %define module	Youri-Package-RPM-Updater
 %define name	perl-%{module}
-%define version 0.2.0
+%define version 0.2.1
 %define release %mkrel 1
 
 Name:		%{name}
@@ -20,6 +20,7 @@ BuildRequires:	perl(DateTime)
 BuildRequires:	perl(RPM4)
 BuildRequires:	perl(Test::Exception)
 BuildRequires:	perl(SVN::Client)
+BuildRequires:	perl(String::ShellQuote)
 BuildRequires:	perl-version
 Requires:	    perl-version
 BuildArch:	    noarch
