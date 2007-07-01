@@ -1,6 +1,6 @@
 %define module	Youri-Package-RPM-Updater
 %define name	perl-%{module}
-%define version 0.1.1
+%define version 0.2.0
 %define release %mkrel 1
 
 Name:		%{name}
@@ -9,7 +9,7 @@ Release:	%{release}
 Summary:	Update RPM packages automatically
 License:	GPL or Artistic
 Group:		Development/Other
-Source:		http://youri.zarb.or/download/%{module}-v%{version}.tar.bz2
+Source:		http://youri.zarb.or/download/%{module}-%{version}.tar.gz
 Url:		http://youri.zarb.org
 Obsoletes:  youri
 %if %{mdkversion} < 1010
@@ -33,7 +33,7 @@ builds a new version. When not given a new version, it just updates the spec
 file a builds a new release.
 
 %prep
-%setup -q -n %{module}-v%{version}
+%setup -q -n %{module}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
