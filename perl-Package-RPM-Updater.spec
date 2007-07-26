@@ -15,12 +15,12 @@ Obsoletes:  youri
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel
 %endif
-BuildRequires:	perl(File::Fetch)
 BuildRequires:	perl(DateTime)
 BuildRequires:	perl(RPM4)
 BuildRequires:	perl(Test::Exception)
 BuildRequires:	perl(SVN::Client)
 BuildRequires:	perl(String::ShellQuote)
+BuildRequires:	perl(LWP::UserAgent)
 BuildRequires:	perl-version
 Requires:	    perl-version
 BuildArch:	    noarch
