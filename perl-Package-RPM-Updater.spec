@@ -1,7 +1,7 @@
 %define module	Youri-Package-RPM-Updater
 %define name	perl-%{module}
-%define version 0.3.4
-%define release %mkrel 2
+%define version 0.4.0
+%define release %mkrel 1
 
 Name:		%{name}
 Version:	%{version}
@@ -19,7 +19,6 @@ BuildRequires:	perl(DateTime)
 BuildRequires:	perl(RPM4)
 BuildRequires:	perl(Test::Exception)
 BuildRequires:	perl(SVN::Client)
-BuildRequires:	perl(String::ShellQuote)
 BuildRequires:	perl(LWP::UserAgent)
 BuildRequires:	perl-version
 Requires:	    perl-version
@@ -54,6 +53,6 @@ rm -rf %{buildroot}
 
 %files 
 %defattr(-,root,root)
-%doc ChangeLog README
+%doc Changes README
 %{perl_vendorlib}/Youri
 %{_mandir}/man3/*
