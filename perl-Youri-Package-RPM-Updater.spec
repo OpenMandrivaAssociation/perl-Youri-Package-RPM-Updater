@@ -6,12 +6,11 @@
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
-Summary:	Update RPM packages automatically
+Summary:	Update RPM packages
 License:	GPL or Artistic
 Group:		Development/Other
-Source:		http://youri.zarb.or/download/%{module}-%{version}.tar.gz
 Url:		http://youri.zarb.org
-Obsoletes:  youri
+Source:		http://youri.zarb.or/download/%{module}-%{version}.tar.gz
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel
 %endif
@@ -29,10 +28,9 @@ BuildRoot:	    %{_tmppath}/%{name}-%{version}
 YOURI stands for "Youri Offers an Upload & Repository Infrastucture". It aims
 to build tools making management of a coherent set of packages easier.
 
-This module automatises rpm package building. When given an explicit new
-version, it downloads new sources automatically, updates the spec file and
-builds a new version. When not given a new version, it just updates the spec
-file a builds a new release.
+This module updates rpm packages. When given an explicit new version, it
+updates the spec file, and downloads new sources automatically. When not given
+a new version, it just updates the spec file.
 
 %prep
 %setup -q -n %{module}-%{version}
