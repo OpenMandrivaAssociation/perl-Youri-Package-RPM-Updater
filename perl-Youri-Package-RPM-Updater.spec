@@ -19,6 +19,7 @@ BuildRequires:	perl(RPM4)
 BuildRequires:	perl(Test::Exception)
 BuildRequires:	perl(SVN::Client)
 BuildRequires:	perl(LWP::UserAgent)
+BuildRequires:	perl(Readonly)
 BuildRequires:	perl-version
 Requires:	    perl-version
 BuildArch:	    noarch
