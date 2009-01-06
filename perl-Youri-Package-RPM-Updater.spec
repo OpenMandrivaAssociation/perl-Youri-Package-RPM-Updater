@@ -1,7 +1,7 @@
 %define module	Youri-Package-RPM-Updater
 %define name	perl-%{module}
-%define version 0.4.2
-%define release %mkrel 2
+%define version 0.4.3
+%define release %mkrel 1
 
 Name:		%{name}
 Version:	%{version}
@@ -11,9 +11,6 @@ License:	GPL or Artistic
 Group:		Development/Other
 Url:		http://youri.zarb.org
 Source:		http://youri.zarb.org/download/%{module}-%{version}.tar.gz
-%if %{mdkversion} < 1010
-BuildRequires:	perl-devel
-%endif
 BuildRequires:	perl(DateTime)
 BuildRequires:	perl(RPM4)
 BuildRequires:	perl(Test::Exception)
