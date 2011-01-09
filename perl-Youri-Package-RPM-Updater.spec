@@ -1,18 +1,16 @@
 %define module	Youri-Package-RPM-Updater
-%define name	perl-%{module}
-%define version 0.5.2
-%define release %mkrel 3
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:		perl-%{module}
+Version:	0.5.2
+Release:	%mkrel 5
 Summary:	Update RPM packages
 License:	GPL or Artistic
 Group:		Development/Other
 Url:		http://youri.zarb.org
-Source:		http://youri.zarb.org/download/%{module}-%{version}.tar.gz
+Source0:	http://youri.zarb.org/download/%{module}-%{version}.tar.gz
+Patch0:		Youri-Package-RPM-Updater-0.5.2-rpm5-port.patch
 BuildRequires:	perl(DateTime)
-BuildRequires:	perl(RPM4)
+BuildRequires:	perl(RPM)
 BuildRequires:	perl(Test::Exception)
 # (tv) temporary disabled due to missing perl-SVN with new perl:
 #BuildRequires:	perl(SVN::Client)
@@ -35,6 +33,7 @@ a new version, it just updates the spec file.
 
 %prep
 %setup -q -n %{module}-%{version}
+%patch0 -p1
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
