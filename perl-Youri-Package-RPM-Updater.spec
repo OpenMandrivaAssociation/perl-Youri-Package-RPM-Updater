@@ -1,19 +1,18 @@
-%define module	Youri-Package-RPM-Updater
+%define upstream_name       Youri-Package-RPM-Updater
+%define upstream_version    0.6.0
 
-Name:		perl-%{module}
-Version:	0.5.2
-Release:	%mkrel 5
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 Summary:	Update RPM packages
 License:	GPL or Artistic
 Group:		Development/Other
 Url:		http://youri.zarb.org
-Source0:	http://youri.zarb.org/download/%{module}-%{version}.tar.gz
-Patch0:		Youri-Package-RPM-Updater-0.5.2-rpm5-port.patch
+Source0:	http://youri.zarb.or/download/%{upstream_name}-%{upstream_version}.tar.gz
 BuildRequires:	perl(DateTime)
 BuildRequires:	perl(RPM)
 BuildRequires:	perl(Test::Exception)
-# (tv) temporary disabled due to missing perl-SVN with new perl:
-#BuildRequires:	perl(SVN::Client)
+BuildRequires:	perl(SVN::Client)
 BuildRequires:	perl(LWP::UserAgent)
 BuildRequires:	perl(Readonly)
 BuildRequires:	perl(List::MoreUtils)
@@ -32,16 +31,14 @@ updates the spec file, and downloads new sources automatically. When not given
 a new version, it just updates the spec file.
 
 %prep
-%setup -q -n %{module}-%{version}
-%patch0 -p1
+%setup -q -n %{upstream_name}-%{upstream_version} 
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
-# (tv) temporary disabled due to missing perl-SVN with new perl:
-#%__make test
+%__make test
 
 %install
 rm -rf %{buildroot}
