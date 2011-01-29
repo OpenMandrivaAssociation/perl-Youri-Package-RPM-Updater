@@ -11,6 +11,7 @@ Url:		http://youri.zarb.org
 Source0:	http://youri.zarb.or/download/%{upstream_name}-%{upstream_version}.tar.gz
 BuildRequires:	perl(DateTime)
 BuildRequires:	perl(Youri::Package::RPM)
+BuildRequires:	perl(RPM)
 BuildRequires:	perl(Test::Exception)
 BuildRequires:	perl(SVN::Client)
 BuildRequires:	perl(LWP::UserAgent)
