@@ -1,5 +1,5 @@
 %define upstream_name       Youri-Package-RPM-Updater
-%define upstream_version    0.6.0
+%define upstream_version    0.6.1
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
