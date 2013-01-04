@@ -1,9 +1,9 @@
 %define upstream_name       Youri-Package-RPM-Updater
-%define upstream_version    0.6.1
+%define upstream_version    0.6.2
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Release:	1
 Summary:	Update RPM packages
 License:	GPL or Artistic
 Group:		Development/Other
@@ -21,8 +21,8 @@ BuildRequires:	perl(Readonly)
 BuildRequires:	perl(List::MoreUtils)
 BuildRequires:	perl(YAML::AppConfig)
 BuildRequires:	perl(version)
-Requires:	perl(version)
-BuildArch:	noarch
+Requires:		perl(version)
+BuildArch:		noarch
 
 %description
 YOURI stands for "Youri Offers an Upload & Repository Infrastucture". It aims
