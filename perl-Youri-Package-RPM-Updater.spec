@@ -8,7 +8,7 @@ Summary:	Update RPM packages
 License:	GPL or Artistic
 Group:		Development/Other
 Url:		http://youri.zarb.org
-Source0:	http://youri.zarb.or/download/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://youri.zarb.org/download/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(DateTime)
