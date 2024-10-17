@@ -7,7 +7,7 @@ Release:	4
 Summary:	Update RPM packages
 License:	GPL or Artistic
 Group:		Development/Other
-Url:		http://youri.zarb.org
+Url:		https://youri.zarb.org
 Source0:	http://youri.zarb.org/download/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
