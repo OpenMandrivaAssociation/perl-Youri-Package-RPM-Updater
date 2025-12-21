@@ -10,6 +10,7 @@ Group:		Development/Other
 Url:		https://youri.zarb.org
 Source0:	http://youri.zarb.org/download/%{upstream_name}-%{upstream_version}.tar.gz
 
+BuildRequires:	make
 BuildRequires:	perl-devel
 BuildRequires:	perl-JSON-PP
 BuildRequires:	perl(DateTime)
