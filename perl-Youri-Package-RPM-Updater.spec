@@ -1,14 +1,14 @@
 %define upstream_name       Youri-Package-RPM-Updater
-%define upstream_version    0.6.2
+%define upstream_version    0.6.3
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Version:	%{upstream_version}
+Release:	1
 Summary:	Update RPM packages
 License:	GPL or Artistic
 Group:		Development/Other
 Url:		https://youri.zarb.org
-Source0:	http://youri.zarb.org/download/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/P/PT/PTERJAN/Youri-Package-RPM-Updater-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
