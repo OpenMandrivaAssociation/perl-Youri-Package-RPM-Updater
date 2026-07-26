@@ -1,14 +1,12 @@
 %define upstream_name       Youri-Package-RPM-Updater
-%define upstream_version    0.6.3
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.6.3
+Release:	2
 Summary:	Update RPM packages
 License:	GPL or Artistic
 Group:		Development/Other
 Url:		https://youri.zarb.org
-Source0:	https://cpan.metacpan.org/authors/id/P/PT/PTERJAN/Youri-Package-RPM-Updater-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/P/PT/PTERJAN/Youri-Package-RPM-Updater-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -35,7 +33,7 @@ updates the spec file, and downloads new sources automatically. When not given
 a new version, it just updates the spec file.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version} 
+%setup -q -n %{upstream_name}-%{version} 
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
